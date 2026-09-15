@@ -51,11 +51,9 @@
   <body>
     <main>
       <h1>Páginas para apresentação</h1>
-      <p>Abra abaixo as páginas publicadas para apresentar ao cliente.</p>
+      <p>Abra abaixo as páginas HTML publicadas para apresentar ao cliente.</p>
       <div id="pages" class="grid"></div>
-      <div id="empty" class="hint" hidden>
-        Nenhuma página HTML foi encontrada na pasta <code>pages/</code>. Faça upload dos arquivos e commit no repositório.
-      </div>
+      <div id="empty" class="hint" hidden>Nenhuma página HTML foi encontrada no repositório.</div>
     </main>
 
     <script>
@@ -75,13 +73,15 @@
         container.appendChild(link);
       };
 
-      fetch(`https://api.github.com/repos/${owner}/${repo}/contents/pages?ref=${branch}`)
+      fetch(`https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`)
         .then((response) => (response.ok ? response.json() : []))
-        .then((files) => {
-          const htmlFiles = Array.isArray(files)
-            ? files
-                .filter((item) => item.type === 'file' && /\.(html?)$/i.test(item.name))
-                .map((item) => `pages/${item.name}`)
+        .then((result) => {
+          const htmlFiles = Array.isArray(result.tree)
+            ? result.tree
+                .filter((item) => item.type === 'blob' && /\.(html?)$/i.test(item.path))
+                .map((item) => item.path)
+                .filter((path) => path.toLowerCase() !== 'index.htm' && path.toLowerCase() !== 'index.html')
+                .sort((a, b) => a.localeCompare(b))
             : [];
 
           if (htmlFiles.length === 0) {
