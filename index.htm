@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apresentação de páginas</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 2rem;
+        background: #f5f7fb;
+        color: #202531;
+      }
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      .grid {
+        display: grid;
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+      }
+      a.page-link {
+        display: block;
+        padding: 0.8rem 1rem;
+        border-radius: 10px;
+        text-decoration: none;
+        background: #ffffff;
+        color: #1c5ed6;
+        border: 1px solid #dce4f2;
+      }
+      a.page-link:hover {
+        background: #edf3ff;
+      }
+      .hint {
+        margin-top: 1rem;
+        padding: 0.9rem;
+        border-radius: 10px;
+        background: #fff;
+        border: 1px dashed #cad5e6;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Páginas para apresentação</h1>
+      <p>Abra abaixo as páginas publicadas para apresentar ao cliente.</p>
+      <div id="pages" class="grid"></div>
+      <div id="empty" class="hint" hidden>
+        Nenhuma página HTML foi encontrada na pasta <code>pages/</code>. Faça upload dos arquivos e commit no repositório.
+      </div>
+    </main>
+
+    <script>
+      const owner = 'EduardoLacustaUni';
+      const repo = 'Fatima';
+      const branch = 'main';
+      const container = document.getElementById('pages');
+      const empty = document.getElementById('empty');
+
+      const render = (filePath) => {
+        const link = document.createElement('a');
+        link.href = filePath;
+        link.className = 'page-link';
+        link.textContent = filePath.replace(/^pages\//, '');
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        container.appendChild(link);
+      };
+
+      fetch(`https://api.github.com/repos/${owner}/${repo}/contents/pages?ref=${branch}`)
+        .then((response) => (response.ok ? response.json() : []))
+        .then((files) => {
+          const htmlFiles = Array.isArray(files)
+            ? files
+                .filter((item) => item.type === 'file' && /\.(html?)$/i.test(item.name))
+                .map((item) => `pages/${item.name}`)
+            : [];
+
+          if (htmlFiles.length === 0) {
+            empty.hidden = false;
+            return;
+          }
+
+          htmlFiles.forEach(render);
+        })
+        .catch(() => {
+          empty.hidden = false;
+        });
+    </script>
+  </body>
+</html>
