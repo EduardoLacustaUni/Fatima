@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Falso Self e a Performance do Bem-Estar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #1A2421; font-family: 'Inter', sans-serif; color: #1A2421; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+        
+        /* Quadrado Perfeito Instagram (1080x1080 proporção) */
+        .slide { width: 600px; height: 600px; background-color: #FAF8F5; padding: 60px; display: flex; flex-direction: column; justify-content: space-between; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.3); overflow: hidden; }
+        
+        .header { display: flex; justify-content: space-between; align-items: center; }
+        .title-tag { font-family: 'Inter', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #C29F5D; font-weight: 500; }
+        .page-num { font-size: 12px; color: #A0A5A3; font-weight: 300; }
+        
+        .content { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 400; line-height: 1.15; color: #1A2421; }
+        h1 span { color: #C29F5D; font-style: italic; }
+        
+        p { font-size: 17px; line-height: 1.6; color: #3A4441; font-weight: 300; }
+        p strong { color: #1A2421; font-weight: 500; }
+        
+        .footer { font-size: 10px; letter-spacing: 1px; color: #A0A5A3; text-transform: uppercase; }
+        
+        /* Layout Dividido para o Slide 4 (Com sua Imagem Local) */
+        .slide-split { padding: 0; flex-direction: row; }
+        .text-side { width: 55%; height: 100%; padding: 60px; display: flex; flex-direction: column; justify-content: space-between; }
+        .image-side { width: 45%; height: 100%; background-size: cover; background-position: center; position: relative; }
+        
+        /* INSIRA O CAMINHO DA SUA IMAGEM LOCAL AQUI */
+        .image-side { background-image: url('https://images.unsplash.com/photo-1627907912793-28208bc69dd4'); }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: CAPA -->
+    <div class="slide">
+        <div class="header">
+            <span class="title-tag">Reflexão</span>
+            <span class="page-num">01</span>
+        </div>
+        <div class="content">
+            <h1>Você se sente <span>real</span><br>ou apenas performa<br>o bem-estar?</h1>
+        </div>
+        <div class="footer">Arraste para o lado</div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+        <div class="header">
+            <span class="title-tag">O Falso Self</span>
+            <span class="page-num">02</span>
+        </div>
+        <div class="content">
+            <p>Vivemos sob uma pressão invisível para estarmos "sempre bem". Na visão winnicottiana, esse esforço contínuo para funcionar perfeitamente pode, sem querer, alimentar um <strong>Falso Self</strong>: uma fachada de submissão às expectativas do mundo.</p>
+        </div>
+        <div class="footer">Continua</div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+        <div class="header">
+            <span class="title-tag">Sentir-se Real</span>
+            <span class="page-num">03</span>
+        </div>
+        <div class="content">
+            <p>Diferente da cobrança exaustiva por "ser a sua melhor versão", Donald Winnicott nos convida a algo mais profundo: <strong>o sentir-se real</strong>. A saúde não é a ausência de sintomas, mas a capacidade de viver com espontaneidade e originalidade criativa.</p>
+        </div>
+        <div class="footer">Continua</div>
+    </div>
+
+    <!-- SLIDE 4: COM SUA IMAGEM DO SOFÁ BEGE -->
+    <div class="slide slide-split">
+        <div class="text-side">
+            <div class="header" style="justify-content: space-between; width: 100%;">
+                <span class="title-tag">A Integração</span>
+                <span class="page-num">04</span>
+            </div>
+            <div class="content">
+                <p style="font-size: 15px; line-height: 1.5;">O autoconhecimento não é um <i>checklist</i> de otimização pessoal. É a maturidade para suportar a dor, a dúvida e a nossa solidão essencial, sem precisar de <strong>atalhos maníacos</strong> ou positividade compulsória.</p>
+            </div>
+            <div class="footer">Continua</div>
+        </div>
+        <div class="image-side"></div>
+    </div>
+
+    <!-- SLIDE 5: CONCLUSÃO / CTA -->
+    <div class="slide">
+        <div class="header">
+            <span class="title-tag">Totalidade</span>
+            <span class="page-num">05</span>
+        </div>
+        <div class="content">
+            <p>Menos performance de estar bem, mais verdade interna. Estar apenas "são" pode ser um estado muito pobre; a verdadeira riqueza está em <strong>habitar a própria vida com totalidade</strong>.</p>
+        </div>
+        <div class="footer">Deixe sua reflexão nos comentários</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Brincar na Terapia - Carrossel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #1A2421; font-family: 'Inter', sans-serif; color: #1A2421; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+        
+        /* Formato quadrado perfeito para o Instagram (1080x1080 de proporção) */
+        .slide { width: 600px; height: 600px; background-color: #FAF8F5; padding: 60px; display: flex; flex-direction: column; justify-content: space-between; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.3); overflow: hidden; }
+        
+        .header { display: flex; justify-content: space-between; align-items: center; }
+        .title-tag { font-family: 'Inter', sans-serif; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #C29F5D; font-weight: 500; }
+        .page-num { font-size: 12px; color: #A0A5A3; font-weight: 300; }
+        
+        .content { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        h1 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400; line-height: 1.15; color: #1A2421; }
+        h1 span { color: #C29F5D; font-style: italic; }
+        
+        p { font-size: 18px; line-height: 1.6; color: #3A4441; font-weight: 300; }
+        p strong { color: #1A2421; font-weight: 500; }
+        
+        .footer { font-size: 10px; letter-spacing: 1px; color: #A0A5A3; text-transform: uppercase; }
+        
+        /* Slide 3 com layout dividido para a imagem premium */
+        .slide-split { padding: 0; flex-direction: row; }
+        .text-side { width: 55%; height: 100%; padding: 60px; display: flex; flex-direction: column; justify-content: space-between; }
+        .image-side { width: 45%; height: 100%; background-size: cover; background-position: center; position: relative; }
+        
+        /* Link direto para a foto do sofá bege que você escolheu */
+        .image-side { background-image: url('https://images.unsplash.com/photo-1629862388904-1d618f6b8ae8?auto=format&fit=crop&w=800'); }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: CAPA -->
+    <div class="slide">
+        <div class="header">
+            <span class="title-tag">Psicologia Clínica</span>
+            <span class="page-num">01</span>
+        </div>
+        <div class="content">
+            <h1>O Brincar na<br><span>Terapia.</span></h1>
+        </div>
+        <div class="footer">Arraste para o lado</div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+        <div class="header">
+            <span class="title-tag">O Brincar na Terapia</span>
+            <span class="page-num">02</span>
+        </div>
+        <div class="content">
+            <p>A grande verdade é que apenas no brincar conseguimos ser <strong>verdadeiramente criativos</strong> e, somente através dessa criatividade, é possível finalmente descobrir o seu verdadeiro <strong>"self"</strong>.</p>
+        </div>
+        <div class="footer">Continua</div>
+    </div>
+
+    <!-- SLIDE 3 (Com a sua Imagem) -->
+    <div class="slide slide-split">
+        <div class="text-side">
+            <div class="header" style="justify-content: space-between; width: 100%;">
+                <span class="title-tag">O Brincar na Terapia</span>
+                <span class="page-num">03</span>
+            </div>
+            <div class="content">
+                <p style="font-size: 16px;">Esse processo é a base para que você passe a se sentir real em um mundo real, permitindo que aquele sentimento cinzento de que <strong>"nada adianta"</strong> seja validado e transformado.</p>
+            </div>
+            <div class="footer">Continua</div>
+        </div>
+        <div class="image-side"></div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide">
+        <div class="header">
+            <span class="title-tag">O Brincar na Terapia</span>
+            <span class="page-num">04</span>
+        </div>
+        <div class="content">
+            <p>O brincar oferece um <strong>"local de repouso"</strong> onde você pode suspender a cansativa tarefa humana de separar os fatos da fantasia, permitindo-se simplesmente ser na presença de alguém em quem confia.</p>
+        </div>
+        <div class="footer">Reflexão</div>
+    </div>
+
+</body>
+</html>

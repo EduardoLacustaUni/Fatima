@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Passado não pede esquecimento, pede um lugar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap');
+        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #121612; font-family: 'Plus Jakarta Sans', sans-serif; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+        
+        /* Quadrado Perfeito Instagram (1080x1080 proporção) - Estilo Oliva Fendi */
+        .slide { width: 600px; height: 600px; background-color: #2B332B; color: #F4F1EA; padding: 50px; display: flex; flex-direction: column; justify-content: space-between; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.5); overflow: hidden; }
+        
+        /* Moldura interna discreta */
+        .slide-border { position: absolute; top: 20px; bottom: 20px; left: 20px; right: 20px; border: 1px solid rgba(244, 241, 234, 0.15); pointer-events: none; }
+        
+        .header { display: flex; justify-content: space-between; align-items: center; z-index: 2; }
+        .title-tag { font-size: 9px; text-transform: uppercase; letter-spacing: 3px; color: #C08B74; font-weight: 500; }
+        .page-num { font-size: 11px; color: #7A857A; font-weight: 300; }
+        
+        .content { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; z-index: 2; }
+        
+        /* Tipografia de títulos em Cinzel para toque clássico e autoral */
+        h1 { font-family: 'Cinzel', serif; font-size: 32px; font-weight: 400; line-height: 1.3; color: #F4F1EA; letter-spacing: -0.5px; }
+        h1 span { color: #C08B74; font-style: normal; }
+        
+        p { font-size: 16px; line-height: 1.7; color: #D2CDC4; font-weight: 300; }
+        p strong { color: #F4F1EA; font-weight: 500; }
+        
+        .footer { font-size: 9px; letter-spacing: 2px; color: #7A857A; text-transform: uppercase; z-index: 2; }
+        
+        /* Slide com Moldura de Foto Estilo Galeria */
+        .gallery-content { display: flex; flex-direction: column; gap: 20px; height: 100%; justify-content: center; }
+        .photo-frame { width: 100%; height: 220px; background-size: cover; background-position: center; border-radius: 2px; filter: grayscale(20%) contract(105%); }
+        .photo-frame { background-image: url('https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=800&q=80'); }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: CAPA -->
+    <div class="slide">
+        <div class="slide-border"></div>
+        <div class="header">
+            <span class="title-tag">Psicanálise & Memória</span>
+            <span class="page-num">01</span>
+        </div>
+        <div class="content">
+            <h1>O passado não pede<br>esquecimento.<br><span>Pede um lugar.</span></h1>
+        </div>
+        <div class="footer">Arraste para o lado →</div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+        <div class="slide-border"></div>
+        <div class="header">
+            <span class="title-tag">A Ilusão da "Faxina"</span>
+            <span class="page-num">02</span>
+        </div>
+        <div class="content">
+            <p>Buscamos a terapia no desejo de "limpar" a memória, como se o sofrimento fosse um erro a ser deletado. Mas para a psicanálise, <strong>curar não é apagar, é integrar</strong>. O passado só comanda o presente quando ainda é um "não-acontecido" dentro de nós.</p>
+        </div>
+        <div class="footer">Continua</div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+        <div class="slide-border"></div>
+        <div class="header">
+            <span class="title-tag">A Angústia de Colapso</span>
+            <span class="page-num">03</span>
+        </div>
+        <div class="content">
+            <p>Muitas vezes, o medo paralisa porque tememos um colapso que <strong>já aconteceu no passado</strong> — mas que não pôde ser vivido na época por falta de suporte. Para sobreviver, congelamos a dor e vestimos a máscara de um Falso Self.</p>
+        </div>
+        <div class="footer">Continua</div>
+    </div>
+
+    <!-- SLIDE 4: COM MOLDURA DE FOTO GALERIA -->
+    <div class="slide">
+        <div class="slide-border"></div>
+        <div class="header">
+            <span class="title-tag">Descongelar o Vínculo</span>
+            <span class="page-num">04</span>
+        </div>
+        <div class="content gallery-content">
+            <div class="photo-frame"></div>
+            <p style="font-size: 14px; line-height: 1.5;">Curar-se é criar um ambiente de sustentação (<i>holding</i>) seguro o suficiente para que possamos finalmente permitir que esse passado <strong>descongele e ganhe sentido</strong>.</p>
+        </div>
+        <div class="footer">Continua</div>
+    </div>
+
+    <!-- SLIDE 5: CONCLUSÃO -->
+    <div class="slide">
+        <div class="slide-border"></div>
+        <div class="header">
+            <span class="title-tag">Liberdade Interna</span>
+            <span class="page-num">05</span>
+        </div>
+        <div class="content">
+            <p>O objetivo não é a ausência de cicatrizes, mas a conquista de um <strong>Self Verdadeiro</strong> que se sente real. A saúde é ter a liberdade de carregar o próprio passado sem que ele precise carregar você.</p>
+        </div>
+        <div class="footer">Como você lida com a sua história? 👇</div>
+    </div>
+
+</body>
+</html>
